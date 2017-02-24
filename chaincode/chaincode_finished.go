@@ -45,7 +45,7 @@ func (t *SimpleChaincode) Init(stub shim.ChaincodeStubInterface, function string
 		return nil, err
 	}
 
-	err2 := stub.PutState("hello_me", []byte(args[1]))
+	err2 := stub.PutState("hello_me", []byte(args[0]))
 	if err2 != nil {
 		return nil, err2
 	}
